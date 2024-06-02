@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'signup.css' %}">
+    <title>Sign Up</title>
+</head>
+<body>
+    
+    <div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+			<div class="login">
+				<form class="form" method="POST" action="{% url 'signin' %}">
+					{% csrf_token %}
+					<label for="chk" aria-hidden="true">Log in</label>
+					<input class="input" type="text" name="username" placeholder="Username" required="">
+					<input class="input" type="password" name="password" placeholder="Password" required="">
+					{% if request.GET.next %}
+					<input type="hidden" name="next" value="{{request.GET.next}}">
+					{% endif %}
+					{% for message in messages %}
+					<span style="color: red; text-align: center;">{{message}}</span>
+					{% endfor %}
+					<button>Log in</button>
+				</form>
+			</div>
+
+    <div class="register">
+				<form class="form" method="POST" action="{% url 'register' %}">
+					{% csrf_token %}
+					<label for="chk" aria-hidden="true">Sign Up</label>
+					<input class="input" type="text" name="username" placeholder="Username" required="">
+					<input class="input" type="email" name="email" placeholder="Email" required="">
+					<input class="input" type="password" name="password" placeholder="Password" required="">
+					<input class="input" type="password" name="password2" placeholder="Password" required="">
+					{% for message in messages %}
+					<span style="color: red; text-align: center;">{{message}}</span>
+					{% endfor %}
+					<button>Sign Up</button>
+				</form>
+			</div>
+	</div>
+</body>
+</html>

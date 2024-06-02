@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+    </head>
+    <body>
+        <div>
+            <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;text-decoration: underline; list-style-type: none; display: inline;">
+                <h2>Place an appointment to visit the mogue</h2>
+                <h4>Welcome @{{user.username}}</h4>
+                <a style="font-size: 20px; font-style: italic;" href="{% url 'tracking' %}">Track past events</a>
+            </div>
+            <div>
+                <form method="POST" action="" class="form">
+                    {% csrf_token %}
+                    <div>
+                        {{form.name}}
+                    </div>
+                    <div>
+                        {{form.email}}
+                    </div>
+                    <div>
+                        {{form.phone_number}}
+                    </div>
+                    <div>
+                        {{form.appointment_date}}
+                    </div>
+                    <div>
+                        {{form.id_number}}
+                    </div>
+                    <div>
+                        {{form.age_of_deceased}}
+                    </div>
+                    <div>
+                        <label style="font-family: sans-serif; margin-top: 20px;">Your relationship with the deceased</label>
+                        {{form.relationship}}
+                    </div>
+                    <div class="message">
+                        {{form.message}}
+                    </div>
+                    {% for message in messages %}
+                    <span style="color: blue; text-align: center;">{{message}}</span>
+                    {% endfor %}
+                    <div style="text-align: center;margin-top: 20px;">
+                        <button type="submit">Book Appointment</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

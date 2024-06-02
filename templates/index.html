@@ -1,0 +1,289 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Mortuary</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- owl carousel -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- custom css -->
+        <link rel = "stylesheet" href = "{% static 'assets/css/main.css' %}" />
+        <link rel = "stylesheet" href = "{% static 'assets/css/utilities.css' %}" />
+        <!-- normalize.css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        
+        <div class="page-wrapper">
+            <!-- header -->
+            <header class = "header" id="me">
+                <nav class = "navbar">
+                    <div class="container">
+                        <div class="navbar-content d-flex justify-content-between align-items-center">
+                            <div class = "brand-and-toggler d-flex align-items-center justify-content-between">
+                                <a href = "#" class = "navbar-brand d-flex align-items-center">
+                                    <span class="brand-shape d-inline-block text-white">M</span>
+                                    <span class="brand-text fw-7">Mortuary</span>
+                                </a>
+                                <button type = "button" class = "d-none navbar-show-btn">
+                                    <i class = "fas fa-bars"></i>
+                                </button>
+                            </div>
+
+                            <div class = "navbar-box">
+                                <button type = "button" class = "navbar-hide-btn">
+                                    <i class = "fas fa-times"></i>
+                                </button>
+
+                                <ul class = "navbar-nav d-flex align-items-center">
+                                    <li class = "nav-item">
+                                        <a href = "#me" class = "nav-link text-white nav-active text-nowrap">Home</a>
+                                    </li>
+                                    <li class = "nav-item">
+                                        <a href = "#service" class = "nav-link text-white text-nowrap">Services</a>
+                                    </li>
+                                    <li class = "nav-item">
+                                        <a href = "{% url 'appointment' %}" class = "nav-link text-white text-nowrap" target="_blank">Plan Ahead</a>
+                                    </li>
+                                    <li class = "nav-item">
+                                        <a href = "#about" class = "nav-link text-white text-nowrap">About Us</a>
+                                    </li>
+                                    <li class = "nav-item">
+                                        <a href = "#feedback" class = "nav-link text-white text-nowrap">Testimonials</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="element-one">
+                    <img src = "{% static 'assets/images/element-img-1.png' %}" alt = "">
+                </div>
+
+                <div class="banner" id="ban">
+                    <div class="container">
+                        <div class="banner-content">
+                            <div class="banner-left">
+                                <div class="content-wrapper">
+                                    <h1 class="banner-title">Hounoring Lives, <br>The Big Journey Begins Here</h1>
+                                    <p class="text text-white">Welcome to Mortuary MS, where we understand the importance of honoring and celebrating the lives of your loved ones.</p>
+                                    <a href = "./Sign up.html" class="btn btn-secondary" target="_blank">Get Started</a>
+                                </div>
+                            </div>
+
+                            <div class = "banner-right d-flex align-items-center justify-content-end">
+                                <img src = "{% static 'assets/images/we.jpg' %}" alt = "">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- end of header -->
+
+            <main>
+                <section class = "sc-services" id="service">
+                    <div class = "services-shape">
+                        <img src = "{% static 'assets/images/curve-shape-1.png' %}" alt = "">
+                    </div>
+                    <div class="container">
+                        <div class = "services-content">
+                            <div class="title-box text-center">
+                                <div class = "content-wrapper">
+                                    <h3 class = "title-box-name" style="font-weight: 800; font-size: 40px;">Our services</h3>
+                                    <div class = "title-separator mx-auto"></div>
+                                    <p class = "text title-box-text">Our dedicated team is committed to guiding you through the funeral planning process with care and sensitivity, offering a range of services including traditional funerals, cremation services, memorial ceremonies, and pre-planning options.</p>
+                                </div>
+                            </div>
+
+                            <div class = "services-list">
+                                <div class = "services-item">
+                                    <div class = "item-icon">
+                                        <img src = "{% static 'assets/images/service-icon-1.png' %}" alt = "service icon">
+                                    </div>
+                                    <h5 class = "item-title fw-7">Arrangements</h5>
+                                    <p class = "text">Trust our experienced staff to handle all the details of funeral arrangements with care and professionalism, ensuring a personalized service tailored to your needs.</p>
+                                </div>
+
+                                <div class = "services-item">
+                                    <div class = "item-icon">
+                                        <img src = "{% static 'assets/images/service-icon-2.png' %}" alt = "service icon">
+                                    </div>
+                                    <h5 class = "item-title fw-7">Grief Support</h5>
+                                    <p class = "text">Find comfort and guidance in our grief support services, providing a safe space for individuals and families to navigate the challenging journey of loss.</p>
+                                </div>
+
+                                <div class = "services-item">
+                                    <div class = "item-icon">
+                                        <img src = "{% static 'assets/images/service-icon-3.png' %}" alt = "service icon">
+                                    </div>
+                                    <h5 class = "item-title fw-7">Pre-Planning</h5>
+                                    <p class = "text">Ease the burden on your loved ones by pre-planning your own funeral or memorial service, ensuring your wishes are known and respected.</p>
+                                </div>
+
+                                <div class = "services-item">
+                                    <div class = "item-icon">
+                                        <img src = "{% static 'assets/images/service-icon-4.png' %}" alt = "service icon">
+                                    </div>
+                                    <h5 class = "item-title fw-7">Cremation</h5>
+                                    <p class = "text">Choose our dignified cremation services for a respectful alternative to traditional burial, guided by compassionate staff every step of the way.</p>
+                                </div>
+
+                                <div class = "services-item">
+                                    <div class = "item-icon">
+                                        <img src = "{% static 'assets/images/service-icon-5.png' %}" alt = "service icon">
+                                    </div>
+                                    <h5 class = "item-title fw-7">Morgue Services</h5>
+                                    <p class = "text">Our secure and respectful morgue facilities provide families with the time they need before making final arrangements, ensuring peace of mind during difficult times</p>
+                                </div>
+
+                                <div class = "services-item">
+                                    <div class = "item-icon">
+                                        <img src = "{% static 'assets/images/service-icon-6.png' %}" alt = "service icon">
+                                    </div>
+                                    <h5 class = "item-title fw-7">Burial</h5>
+                                    <p class = "text">Honor your loved one with our comprehensive burial services, tailored to create a meaningful and personalized tribute that reflects their wishes and values.</p>
+                                </div>
+                            </div>
+
+                            <div class = "d-flex align-items-center justify-content-center services-main-btn">
+                                <a href="#me"><button  type = "" class = "btn btn-primary-outline">Home</button></a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            
+
+                <section class = "sc-grid sc-grid-two" id="about">
+                    <div class = "container">
+                        <div class = "grid-content d-grid align-items-center">
+                            <div class = "grid-img">
+                                <img src = "{% static 'assets/images/me.jpg' %}" alt = "">
+                            </div>
+                            <div class = "grid-text">
+                                <div class = "content-wrapper text-start">
+                                    <div class = "title-box">
+                                        <h3 class = "title-box-name">About Us</h3>
+                                        <div class = "title-separator mx-auto"></div>
+                                    </div>
+                                    <p class = "text title-box-text">we believe in honoring lives with dignity, compassion, and respect. Founded on the principles of empathy and professionalism, we have been serving families in Kenya and beyond for 10 years.</p>
+                                    <button type = "button" class = "btn btn-primary-outline">
+                                        Read More
+                                        <img src = "{% static 'assets/images/arrow-down.svg' %}" />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class = "sc-feedback" id="feedback">
+                    <div class="container">
+                        <div class = "feedback-content">
+                            <div class = "feedback-element">
+                                <img src = "{% static 'assets/images/element-img-3.png' %}">
+                            </div>
+                            <div class="feedback-element-2">
+                                <img src = "{% static 'assets/images/element-img-5.png' %}">
+                            </div>
+                            <div class = "title-box text-center">
+                                <div class = "content-wrapper">
+                                    <h3 class = "title-box-name text-white">What our customer are saying</h3>
+                                    <div class = "title-separator mx-auto"></div>
+                                </div>
+                            </div>
+
+                            <div class = "feedback-list feedback-slider owl-carousel owl-theme">
+                                <div class = "feedback-item d-grid">
+                                    <div class = "item-left d-flex align-items-center">
+                                        <div class = "item-img">
+                                            <img src = "{% static 'assets/images/nic.jpg' %}" alt = "">
+                                        </div>
+                                        <div class = "item-info text-white">
+                                            <p class = "fw-7 name">Nicholas Juma</p>
+                                            <span class = "designation fw-4">Developer</span>
+                                        </div>
+                                    </div>
+                                    <div class = "item-right">
+                                        <p class = "text text-white">"I would highly recommend Mortuary MS to anyone in need of funeral services. Thank you for your exceptional care and support."</p>
+                                    </div>
+                                </div>
+
+                                <div class = "feedback-item d-grid">
+                                    <div class = "item-left d-flex align-items-center">
+                                        <div class = "item-img">
+                                            <img src = "{% static 'assets/images/nic.jpg' %}" alt = "">
+                                        </div>
+                                        <div class = "item-info text-white">
+                                            <p class = "fw-7 name">Nicholas Juma</p>
+                                            <span class = "designation fw-4">Developer</span>
+                                        </div>
+                                    </div>
+                                    <div class = "item-right">
+                                        <p class = "text text-white">"I would highly recommend Mortuary MS to anyone in need of funeral services. Thank you for your exceptional care and support.</p>
+                                    </div>
+                                </div>
+
+                                <div class = "feedback-item d-grid">
+                                    <div class = "item-left d-flex align-items-center">
+                                        <div class = "item-img">
+                                            <img src = "{% static 'assets/images/nic.jpg' %}" alt = "">
+                                        </div>
+                                        <div class = "item-info text-white">
+                                            <p class = "fw-7 name">Nicholas Juma</p>
+                                            <span class = "designation fw-4">Developer</span>
+                                        </div>
+                                    </div>
+                                    <div class = "item-right">
+                                        <p class = "text text-white">"I would highly recommend Mortuary MS to anyone in need of funeral services. Thank you for your exceptional care and support.</p>
+                                    </div>
+                                </div>
+
+                                <div class = "feedback-item d-grid">
+                                    <div class = "item-left d-flex align-items-center">
+                                        <div class = "item-img">
+                                            <img src = "{% static 'assets/images/nic.jpg' %}" alt = "">
+                                        </div>
+                                        <div class = "item-info text-white">
+                                            <p class = "fw-7 name">Nicholas Juma</p>
+                                            <span class = "designation fw-4">Developer</span>
+                                        </div>
+                                    </div>
+                                    <div class = "item-right">
+                                        <p class = "text text-white">"I would highly recommend Mortuary MS to anyone in need of funeral services. Thank you for your exceptional care and support.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!--  -->
+            </main>
+
+            <!--  -->
+        </div>
+        
+
+
+
+
+
+
+
+        <!-- jquery cdn -->
+        <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+        <!-- owl carousel -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- custom js -->
+        <script src = "{% static 'assets/js/script.js' %}"></script>
+    </body>
+</html>
